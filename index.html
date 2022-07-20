@@ -11,13 +11,13 @@
     <ul id="paises"></ul>
 </body>
 <script>   
-    fetch('https://restcountries.com/v3.1/all')
-        .then(function(data){
-            return data.json()
-        })
-  			.then(function(data){
+    fetch('https://restcountries.com/v3.1/all') /* fetch- fornece uma API*/
+    .then(function(data){                     /* fuction- conjunto de instrução que executa a tarefa */ /* then- o que sera executado depois de executar a API*/
+            return data.json()                 /* return- retorna o valor que foi chamado na função*/ /* .jason- */
+        }) 
+  			.then(function(data){             /* then- o que sera executado depois de executar a API*/  
       		
-      		data.forEach(function(item){
+      		data.forEach(function(item){    
           	document.querySelector("#paises").innerHTML += 
 				`<li>
 					<img class="width_100px" src="${item.flags.svg}" alt="bandeira"/>
